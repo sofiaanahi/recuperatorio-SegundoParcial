@@ -8,10 +8,16 @@ const helmet = require("helmet");
 require("dotenv").config();
 require("ejs");
 
+const { sequelize } = require("./database");
+
+sequelize
+  .authenticate()
+  .then(() => console.log("La conexion de base de datos es exitosa"))
+  .catch((error) => console.log("Error al conectar a la base de datos", error));
+
 const app = express();
 const port = process.env.PORT || 8000;
 
-// Middlewares
 // TODO: Implementar middlewares
 
 app.use(morgan("dev"));
