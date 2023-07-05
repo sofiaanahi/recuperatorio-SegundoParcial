@@ -2,15 +2,15 @@ const Reserva = require("../models/Reserva");
 const ctrlReservas = {};
 
 ctrlReservas.renderListaReservas = (req, res) => {
-  Reserva.render("");
+  res.render("index-lista");
 };
 
 ctrlReservas.renderFormNuevaReserva = (req, res) => {
-  Reserva.render("");
+  res.render("nueva-reserva");
 };
 
 ctrlReservas.renderFormEditarReserva = (req, res) => {
-  Reserva.render("");
+  res.render("editar-reserva");
 };
 
 // ==========================================
